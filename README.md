@@ -64,7 +64,7 @@ restaurant-website/
 
 3.Customize menu items, images, and styles as 
 
-💡 Future Enhancements (To-Do)
+```💡 Future Enhancements (To-Do)
  Add carousel/slider for customer testimonials
 
  Implement client-side and server-side reservation form validation
@@ -78,7 +78,7 @@ restaurant-website/
  Deploy on Netlify or Vercel with CI/CD for automated updates
 
  Add SEO optimization and metadata
-
+```
  📄 License
 This project is licensed under the MIT License — see the LICENSE file for details.
 
