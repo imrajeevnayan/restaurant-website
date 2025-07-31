@@ -1,0 +1,45 @@
+
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .dish-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .nav-link:hover {
+            color: #dc2626;
+        }
+        
+        .active {
+            color: #dc2626;
+            font-weight: 600;
+        }
+        
+        .menu-tab.active {
+            background-color: #dc2626;
+            color: white;
+        }
+        
+        .reservation-form input, .reservation-form select {
+            border-bottom: 2px solid #d1d5db;
+            transition: all 0.3s;
+        }
+        
+        .reservation-form input:focus, .reservation-form select:focus {
+            border-bottom-color: #dc2626;
+            outline: none;
+        }

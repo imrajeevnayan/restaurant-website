@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Junction | Authentic Cuisine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="Js/script.js" defer></script>
+</head>
+<body class="bg-amber-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-red-600">Desi Junction</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#reservation" class="nav-link">Reservations</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-700">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#home" class="block py-2 nav-link active">Home</a>
+            <a href="#menu" class="block py-2 nav-link">Menu</a>
+            <a href="#about" class="block py-2 nav-link">About</a>
+            <a href="#reservation" class="block py-2 nav-link">Reservations</a>
+            <a href="#contact" class="block py-2 nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero min-h-screen flex items-center justify-center text-center text-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to Desi Junction</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">Experience the finest culinary delights crafted with passion and tradition</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#menu" class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">View Menu</a>
+                <a href="#reservation" class="bg-transparent border-2 border-white hover:bg-white hover:text-red-600 text-white px-8 py-3 rounded-lg font-semibold transition duration-300">Book a Table</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes -->
+    <!-- Photo Gallery -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Restaurant Interior" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dining Area" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Bar Area" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1555244162-803834f70033?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Chef Cooking" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dish Presentation" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Wine Selection" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1398&q=80" alt="Dessert Display" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1565895405227-31cffbe0cf86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Outdoor Seating" class="w-full h-48 object-cover rounded-lg shadow hover:scale-105 transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-amber-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Signature Dishes</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Dish 1 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Signature Dish" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Truffle Pasta</h3>
+                        <p class="text-gray-600 mb-4">Handmade pasta with black truffle cream sauce and wild mushrooms</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-lg">₹ 499</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition duration-300">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 2 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1081&q=80" alt="Signature Dish" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Grilled Salmon</h3>
+                        <p class="text-gray-600 mb-4">Fresh Atlantic salmon with lemon butter sauce and seasonal vegetables</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-lg">₹ 599</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition duration-300">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dish 3 -->
+                <div class="dish-card bg-white rounded-lg overflow-hidden shadow-lg transition duration-500">
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80" alt="Signature Dish" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Chocolate Lava Cake</h3>
+                        <p class="text-gray-600 mb-4">Warm chocolate cake with molten center, served with vanilla ice cream</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-lg">₹ 399</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded transition duration-300">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Our Menu</h2>
+            
+            <!-- Menu Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button class="menu-tab active px-6 py-2 rounded-full" data-category="appetizers">Appetizers</button>
+                <button class="menu-tab px-6 py-2 rounded-full bg-gray-200" data-category="mains">Main Courses</button>
+                <button class="menu-tab px-6 py-2 rounded-full bg-gray-200" data-category="desserts">Desserts</button>
+                <button class="menu-tab px-6 py-2 rounded-full bg-gray-200" data-category="drinks">Drinks</button>
+            </div>
+            
+            <!-- Menu Content -->
+            <div class="menu-content">
+                <!-- Appetizers -->
+                <div id="appetizers" class="menu-category" style="max-height: 600px; overflow-y: auto;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Bruschetta" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Bruschetta</h3>
+                                <p class="text-gray-600 text-sm">Toasted bread topped with tomatoes, garlic, and fresh basil</p>
+                                <span class="text-red-600 font-bold">₹749</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Calamari" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Calamari</h3>
+                                <p class="text-gray-600 text-sm">Crispy fried squid served with marinara sauce</p>
+                                <span class="text-red-600 font-bold">₹1,099</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1608212589631-874b54a8d908?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Caprese Salad" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Caprese Salad</h3>
+                                <p class="text-gray-600 text-sm">Fresh mozzarella, tomatoes, and basil drizzled with balsamic glaze</p>
+                                <span class="text-red-600 font-bold">₹899</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Stuffed Mushrooms" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Stuffed Mushrooms</h3>
+                                <p class="text-gray-600 text-sm">Mushroom caps filled with herbed cream cheese</p>
+                                <span class="text-red-600 font-bold">₹849</span>
+                            </div>
+                        </div>
+                        <!-- Indian Appetizers -->
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Samosa" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Samosa</h3><p class="text-gray-600 text-sm">Crispy pastry filled with spiced potatoes and peas</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Paneer Tikka</h3><p class="text-gray-600 text-sm">Grilled cottage cheese cubes marinated in Indian spices</p><span class="text-red-600 font-bold">₹349</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Aloo Tikki" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Aloo Tikki</h3><p class="text-gray-600 text-sm">Spiced potato patties served with chutney</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80" alt="Dahi Puri" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Dahi Puri</h3><p class="text-gray-600 text-sm">Crispy puris filled with yogurt, chutneys, and spices</p><span class="text-red-600 font-bold">₹179</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Pav Bhaji" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Pav Bhaji</h3><p class="text-gray-600 text-sm">Spicy mashed vegetables served with buttered bread</p><span class="text-red-600 font-bold">₹249</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Onion Bhaji" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Onion Bhaji</h3><p class="text-gray-600 text-sm">Crispy onion fritters with spices</p><span class="text-red-600 font-bold">₹129</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=800&q=80" alt="Hara Bhara Kabab" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Hara Bhara Kabab</h3><p class="text-gray-600 text-sm">Spinach and green pea patties</p><span class="text-red-600 font-bold">₹159</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Chicken Pakora" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Chicken Pakora</h3><p class="text-gray-600 text-sm">Spiced chicken fritters</p><span class="text-red-600 font-bold">₹249</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Fish Amritsari" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Fish Amritsari</h3><p class="text-gray-600 text-sm">Batter-fried spicy fish from Punjab</p><span class="text-red-600 font-bold">₹299</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Dhokla" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Dhokla</h3><p class="text-gray-600 text-sm">Steamed savory cake from Gujarat</p><span class="text-red-600 font-bold">₹139</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Paneer Pakora" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Paneer Pakora</h3><p class="text-gray-600 text-sm">Fried cottage cheese fritters</p><span class="text-red-600 font-bold">₹179</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Veg Spring Roll" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Veg Spring Roll</h3><p class="text-gray-600 text-sm">Crispy rolls stuffed with vegetables</p><span class="text-red-600 font-bold">₹159</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80" alt="Chilli Paneer" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Chilli Paneer</h3><p class="text-gray-600 text-sm">Spicy Indo-Chinese paneer starter</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <!-- Indian Appetizer 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Samosa" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Samosa</h3>
+                                <p class="text-gray-600 text-sm">Crispy pastry filled with spiced potatoes and peas</p>
+                                <span class="text-red-600 font-bold">₹199</span>
+                            </div>
+                        </div>
+                        <!-- Indian Appetizer 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Paneer Tikka" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Paneer Tikka</h3>
+                                <p class="text-gray-600 text-sm">Grilled cottage cheese cubes marinated in Indian spices</p>
+                                <span class="text-red-600 font-bold">₹349</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Courses (hidden by default) -->
+                <div id="mains" class="menu-category hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="max-height: 600px; overflow-y: auto;">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1551504734-5ee1c4a1479b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Filet Mignon" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Filet Mignon</h3>
+                                <p class="text-gray-600 text-sm">8oz tender beef filet with red wine reduction</p>
+                                <span class="text-red-600 font-bold">₹2,999</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Chicken Parmesan" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Chicken Parmesan</h3>
+                                <p class="text-gray-600 text-sm">Breaded chicken topped with marinara and mozzarella</p>
+                                <span class="text-red-600 font-bold">₹1,899</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1603360946369-dc9bb6258143?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=735&q=80" alt="Vegetable Risotto" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Vegetable Risotto</h3>
+                                <p class="text-gray-600 text-sm">Creamy arborio rice with seasonal vegetables</p>
+                                <span class="text-red-600 font-bold">₹1,599</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1371&q=80" alt="Grilled Salmon" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Grilled Salmon</h3>
+                                <p class="text-gray-600 text-sm">Atlantic salmon with lemon butter sauce</p>
+                                <span class="text-red-600 font-bold">₹2,249</span>
+                            </div>
+                        </div>
+                        <!-- Indian Main Courses -->
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Butter Chicken</h3><p class="text-gray-600 text-sm">Tender chicken cooked in creamy tomato gravy</p><span class="text-red-600 font-bold">₹599</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Paneer Butter Masala" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Paneer Butter Masala</h3><p class="text-gray-600 text-sm">Cottage cheese cubes in rich tomato-cashew gravy</p><span class="text-red-600 font-bold">₹499</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Chicken Tikka Masala" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Chicken Tikka Masala</h3><p class="text-gray-600 text-sm">Grilled chicken in spicy tomato sauce</p><span class="text-red-600 font-bold">₹599</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Dal Makhani" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Dal Makhani</h3><p class="text-gray-600 text-sm">Slow-cooked black lentils in creamy sauce</p><span class="text-red-600 font-bold">₹349</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Rogan Josh" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Rogan Josh</h3><p class="text-gray-600 text-sm">Kashmiri-style lamb curry</p><span class="text-red-600 font-bold">₹699</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Chole Bhature" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Chole Bhature</h3><p class="text-gray-600 text-sm">Spicy chickpeas with fried bread</p><span class="text-red-600 font-bold">₹249</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Biryani" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Hyderabadi Biryani</h3><p class="text-gray-600 text-sm">Aromatic rice with chicken and spices</p><span class="text-red-600 font-bold">₹399</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Rajma Chawal" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Rajma Chawal</h3><p class="text-gray-600 text-sm">Kidney beans curry with rice</p><span class="text-red-600 font-bold">₹249</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Palak Paneer" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Palak Paneer</h3><p class="text-gray-600 text-sm">Cottage cheese in spinach gravy</p><span class="text-red-600 font-bold">₹399</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Goan Fish Curry" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Goan Fish Curry</h3><p class="text-gray-600 text-sm">Spicy coconut-based fish curry</p><span class="text-red-600 font-bold">₹499</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Malai Kofta" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Malai Kofta</h3><p class="text-gray-600 text-sm">Vegetable balls in creamy sauce</p><span class="text-red-600 font-bold">₹449</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Mutton Curry" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Mutton Curry</h3><p class="text-gray-600 text-sm">Traditional Indian spiced mutton curry</p><span class="text-red-600 font-bold">₹799</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Navratan Korma" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Navratan Korma</h3><p class="text-gray-600 text-sm">Mixed vegetables in rich creamy sauce</p><span class="text-red-600 font-bold">₹399</span></div></div>
+                        <!-- Indian Main Course 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Butter Chicken" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Butter Chicken</h3>
+                                <p class="text-gray-600 text-sm">Tender chicken cooked in creamy tomato gravy</p>
+                                <span class="text-red-600 font-bold">₹599</span>
+                            </div>
+                        </div>
+                        <!-- Indian Main Course 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Paneer Butter Masala" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Paneer Butter Masala</h3>
+                                <p class="text-gray-600 text-sm">Cottage cheese cubes in rich tomato-cashew gravy</p>
+                                <span class="text-red-600 font-bold">₹499</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desserts (hidden by default) -->
+                <div id="desserts" class="menu-category hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="max-height: 600px; overflow-y: auto;">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=927&q=80" alt="Chocolate Lava Cake" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Chocolate Lava Cake</h3>
+                                <p class="text-gray-600 text-sm">Warm chocolate cake with molten center</p>
+                                <span class="text-red-600 font-bold">₹849</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1557&q=80" alt="Tiramisu" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Tiramisu</h3>
+                                <p class="text-gray-600 text-sm">Classic Italian coffee-flavored dessert</p>
+                                <span class="text-red-600 font-bold">₹749</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Cheesecake" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">New York Cheesecake</h3>
+                                <p class="text-gray-600 text-sm">Creamy cheesecake with berry compote</p>
+                                <span class="text-red-600 font-bold">₹749</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" alt="Crème Brûlée" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Crème Brûlée</h3>
+                                <p class="text-gray-600 text-sm">Rich custard topped with caramelized sugar</p>
+                                <span class="text-red-600 font-bold">₹849</span>
+                            </div>
+                        </div>
+                        <!-- Indian Desserts -->
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=800&q=80" alt="Gulab Jamun" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Gulab Jamun</h3><p class="text-gray-600 text-sm">Soft milk-solid balls soaked in rose-flavored syrup</p><span class="text-red-600 font-bold">₹299</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Rasgulla" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Rasgulla</h3><p class="text-gray-600 text-sm">Spongy cottage cheese balls in sugar syrup</p><span class="text-red-600 font-bold">₹249</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Jalebi" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Jalebi</h3><p class="text-gray-600 text-sm">Crispy, syrup-soaked sweet spirals</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Kaju Katli" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Kaju Katli</h3><p class="text-gray-600 text-sm">Cashew fudge, a festival favorite</p><span class="text-red-600 font-bold">₹349</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Rasmalai" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Rasmalai</h3><p class="text-gray-600 text-sm">Soft cheese patties in saffron milk</p><span class="text-red-600 font-bold">₹299</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Gajar Halwa" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Gajar Halwa</h3><p class="text-gray-600 text-sm">Carrot pudding with nuts</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Kulfi" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Kulfi</h3><p class="text-gray-600 text-sm">Traditional Indian ice cream</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Mysore Pak" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Mysore Pak</h3><p class="text-gray-600 text-sm">Gram flour and ghee fudge</p><span class="text-red-600 font-bold">₹179</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Sandesh" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Sandesh</h3><p class="text-gray-600 text-sm">Bengali sweet made from paneer</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Peda" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Peda</h3><p class="text-gray-600 text-sm">Milk fudge flavored with cardamom</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Malpua" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Malpua</h3><p class="text-gray-600 text-sm">Sweet pancakes soaked in syrup</p><span class="text-red-600 font-bold">₹179</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Shrikhand" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Shrikhand</h3><p class="text-gray-600 text-sm">Sweetened strained yogurt with saffron</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <!-- Indian Dessert -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1505250469679-203ad9ced0cb?auto=format&fit=crop&w=800&q=80" alt="Gulab Jamun" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Gulab Jamun</h3>
+                                <p class="text-gray-600 text-sm">Soft milk-solid balls soaked in rose-flavored syrup</p>
+                                <span class="text-red-600 font-bold">₹299</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Drinks (hidden by default) -->
+                <div id="drinks" class="menu-category hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="max-height: 600px; overflow-y: auto;">
+                        <!-- Item 1 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Wine" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">House Wine</h3>
+                                <p class="text-gray-600 text-sm">Glass of our premium house red or white</p>
+                                <span class="text-red-600 font-bold">₹749</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 2 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1605270012917-bf157c5a9541?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Craft Beer" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Craft Beer</h3>
+                                <p class="text-gray-600 text-sm">Selection of local craft beers</p>
+                                <span class="text-red-600 font-bold">₹599</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 3 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1534957753291-64c0b1435a1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Cocktails" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Signature Cocktails</h3>
+                                <p class="text-gray-600 text-sm">Ask your server about our seasonal specials</p>
+                                <span class="text-red-600 font-bold">₹1,099</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Item 4 -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1496318447583-f524534e9ce1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1413&q=80" alt="Coffee" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Artisan Coffee</h3>
+                                <p class="text-gray-600 text-sm">Locally roasted coffee brewed to perfection</p>
+                                <span class="text-red-600 font-bold">₹449</span>
+                            </div>
+                        </div>
+                        <!-- Indian Drinks -->
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Masala Chai" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Masala Chai</h3><p class="text-gray-600 text-sm">Traditional Indian spiced tea brewed with milk</p><span class="text-red-600 font-bold">₹199</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Filter Coffee" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Filter Coffee</h3><p class="text-gray-600 text-sm">South Indian strong coffee with milk</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Lassi" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Sweet Lassi</h3><p class="text-gray-600 text-sm">Refreshing yogurt-based drink</p><span class="text-red-600 font-bold">₹129</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Salted Lassi" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Salted Lassi</h3><p class="text-gray-600 text-sm">Savory yogurt drink with spices</p><span class="text-red-600 font-bold">₹129</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Badam Milk" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Badam Milk</h3><p class="text-gray-600 text-sm">Almond-flavored sweet milk</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Jaljeera" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Jaljeera</h3><p class="text-gray-600 text-sm">Spiced cumin lemonade</p><span class="text-red-600 font-bold">₹99</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&fit=crop&w=800&q=80" alt="Aam Panna" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Aam Panna</h3><p class="text-gray-600 text-sm">Raw mango summer cooler</p><span class="text-red-600 font-bold">₹119</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=800&q=80" alt="Nimbu Pani" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Nimbu Pani</h3><p class="text-gray-600 text-sm">Classic Indian lemonade</p><span class="text-red-600 font-bold">₹89</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1519864600265-abb23847ef2c?auto=format&fit=crop&w=800&q=80" alt="Thandai" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Thandai</h3><p class="text-gray-600 text-sm">Festive milk drink with nuts and spices</p><span class="text-red-600 font-bold">₹149</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Chaas" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Chaas</h3><p class="text-gray-600 text-sm">Spiced buttermilk</p><span class="text-red-600 font-bold">₹89</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1511690743698-d9d85f2fbf38?auto=format&fit=crop&w=800&q=80" alt="Kokum Sharbat" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Kokum Sharbat</h3><p class="text-gray-600 text-sm">Sweet-sour kokum fruit drink</p><span class="text-red-600 font-bold">₹109</span></div></div>
+                        <div class="flex gap-4"><img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&fit=crop&w=800&q=80" alt="Sol Kadhi" class="w-24 h-24 object-cover rounded-lg"><div><h3 class="font-bold text-lg">Sol Kadhi</h3><p class="text-gray-600 text-sm">Konkani coconut and kokum drink</p><span class="text-red-600 font-bold">₹129</span></div></div>
+                        <!-- Indian Drink -->
+                        <div class="flex gap-4">
+                            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Masala Chai" class="w-24 h-24 object-cover rounded-lg">
+                            <div>
+                                <h3 class="font-bold text-lg">Masala Chai</h3>
+                                <p class="text-gray-600 text-sm">Traditional Indian spiced tea brewed with milk</p>
+                                <span class="text-red-600 font-bold">₹199</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">What Our Guests Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 text-2xl mr-2">★★★★★</div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The food was absolutely incredible! Every dish we tried was packed with flavor and beautifully presented. The service was impeccable too."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah J." class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Yeshwant K.</h4>
+                            <p class="text-gray-600 text-sm">Regular Customer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 text-2xl mr-2">★★★★★</div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"We celebrated our anniversary here with Khusi and it was perfect. The ambiance, the wine pairing suggestions, and especially the chocolate lava cake made it unforgettable."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Michael T." class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Suraj K.</h4>
+                            <p class="text-gray-600 text-sm">First-time Visitor</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-400 text-2xl mr-2">★★★★☆</div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"Consistently excellent food and service. The truffle pasta is my favorite dish in town. Only wish they had more vegetarian options."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya K." class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <h4 class="font-bold">Priya Kumari.</h4>
+                            <p class="text-gray-600 text-sm">Food Blogger</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+<div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <div class="text-amber-400 text-2xl mr-2">★★★★★</div>
+    </div>
+    <p class="text-gray-700 mb-4">"This place has the best butter chicken I’ve ever had. The flavors were rich and the naan was perfectly soft. Highly recommend!"</p>
+    <div class="flex items-center">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Rohit M." class="w-10 h-10 rounded-full mr-3">
+        <div>
+            <h4 class="font-bold">Rohit M.</h4>
+            <p class="text-gray-600 text-sm">Repeat Customer</p>
+        </div>
+    </div>
+</div>
+<!-- Testimonial 5 -->
+<div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <div class="text-amber-400 text-2xl mr-2">★★★★★</div>
+    </div>
+    <p class="text-gray-700 mb-4">"Visited for lunch with colleagues. Clean space, fantastic vegetarian thali, and great filter coffee to end the meal."</p>
+    <div class="flex items-center">
+        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Meena R." class="w-10 h-10 rounded-full mr-3">
+        <div>
+            <h4 class="font-bold">Meena R.</h4>
+            <p class="text-gray-600 text-sm">Local Guide</p>
+        </div>
+    </div>
+</div>
+<!-- Testimonial 6 -->
+<div class="bg-amber-50 p-6 rounded-lg shadow-lg">
+    <div class="flex items-center mb-4">
+        <div class="text-amber-400 text-2xl mr-2">★★★★★</div>
+    </div>
+    <p class="text-gray-700 mb-4">"Absolutely loved the spicy paneer tikka! Service was quick and the staff was incredibly friendly. Definitely coming back next weekend."</p>
+    <div class="flex items-center">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Priya D." class="w-10 h-10 rounded-full mr-3">
+        <div>
+            <h4 class="font-bold">Priya D.</h4>
+            <p class="text-gray-600 text-sm">Food Blogger</p>
+        </div>
+    </div>
+</div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-amber-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Restaurant Interior" class="rounded-lg shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Our Story</h2>
+                    <p class="text-gray-700 mb-4">Founded in 2005, Desi Junction began as a small family-owned bistro with a passion for authentic cuisine. What started as a humble 10-table restaurant has grown into an award-winning dining destination, thanks to our loyal customers and dedicated team.</p>
+                    <p class="text-gray-700 mb-6">We believe in using only the freshest, locally-sourced ingredients to create dishes that tell a story. Every recipe on our menu has been carefully crafted and perfected over the years, blending traditional techniques with modern creativity.</p>
+                    <h3 class="text-xl font-bold mb-3 text-gray-800">Our Mission</h3>
+                    <p class="text-gray-700">To provide an unforgettable dining experience where every guest feels at home, every dish tells a story, and every meal is a celebration of flavor and community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Make a Reservation</h2>
+            <div class="max-w-2xl mx-auto bg-amber-50 p-8 rounded-lg shadow-lg">
+                <form class="reservation-form space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 bg-transparent" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 bg-transparent" required>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 bg-transparent" required>
+                        </div>
+                        <div>
+                            <label for="guests" class="block text-gray-700 mb-2">Number of Guests</label>
+                            <select id="guests" class="w-full px-4 py-2 bg-transparent" required>
+                                <option value="1">1 Person</option>
+                                <option value="2">2 People</option>
+                                <option value="3">3 People</option>
+                                <option value="4">4 People</option>
+                                <option value="5">5 People</option>
+                                <option value="6">6 People</option>
+                                <option value="7">7 People</option>
+                                <option value="8">8+ People</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="date" class="block text-gray-700 mb-2">Date</label>
+                            <input type="date" id="date" class="w-full px-4 py-2 bg-transparent" required>
+                        </div>
+                        <div>
+                            <label for="time" class="block text-gray-700 mb-2">Time</label>
+                            <select id="time" class="w-full px-4 py-2 bg-transparent" required>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="11:30">11:30 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="12:30">12:30 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="13:30">1:30 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="17:30">5:30 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="18:30">6:30 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                                <option value="19:30">7:30 PM</option>
+                                <option value="20:00">8:00 PM</option>
+                                <option value="20:30">8:30 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="special-requests" class="block text-gray-700 mb-2">Special Requests</label>
+                        <textarea id="special-requests" rows="3" class="w-full px-4 py-2 bg-transparent border-b-2 border-gray-300 focus:border-red-600"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg font-semibold transition duration-300">Reserve Now</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-12">
+                <div class="md:w-1/2">
+                    <div class="bg-white p-8 rounded-lg shadow-lg h-full">
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Get in Touch</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-map-marker-alt text-red-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Address</h4>
+                                    <p class="text-gray-600">123 Indiranagar Main Road, Bengaluru, KA 560038</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-phone-alt text-red-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Phone</h4>
+                                    <p class="text-gray-600">(123) 456-7890</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-envelope text-red-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Email</h4>
+                                    <p class="text-gray-600">info@savorybites.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <i class="fas fa-clock text-red-600 mt-1"></i>
+                                <div>
+                                    <h4 class="font-semibold">Hours</h4>
+                                    <p class="text-gray-600">
+                                        Monday - Thursday: 11:00 AM - 9:00 PM<br>
+                                        Friday - Saturday: 11:00 AM - 10:00 PM<br>
+                                        Sunday: 10:00 AM - 8:00 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="h-full rounded-lg overflow-hidden shadow-lg">
+                        <iframe src="https://www.google.com/maps?q=123+Indiranagar+Main+Road,+Bengaluru,+KA+560038&output=embed" width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-16 bg-red-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+            <p class="max-w-2xl mx-auto mb-8">Subscribe to receive updates on special events, seasonal menus, and exclusive offers.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l focus:outline-none text-gray-900">
+                <button type="submit" class="bg-amber-600 hover:bg-amber-700 px-6 py-3 rounded-r font-semibold transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Desi Junction</h3>
+                    <p class="text-gray-400">Authentic cuisine crafted with passion and tradition since 2005.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-white transition">Menu</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">About Us</a></li>
+                        <li><a href="#reservation" class="text-gray-400 hover:text-white transition">Reservations</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-center gap-2"><i class="fas fa-map-marker-alt"></i> 123 Indiranagar Main Road, Bengaluru, KA 560038</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-phone-alt"></i> (123) 456-7890</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-envelope"></i> info@savorybites.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-xl"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                    <div class="mt-6">
+                        <h4 class="font-bold mb-2">Newsletter</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="px-4 py-2 text-gray-900 rounded-l focus:outline-none w-full">
+                            <button class="bg-red-600 hover:bg-red-700 px-4 py-2 rounded-r"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Desi Junction. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
