@@ -40,7 +40,7 @@ Example:
 ---
 
 ## 📂 Project Structure
-
+```
 restaurant-website/
 ├── index.html # Main landing page
 ├── css/
@@ -50,8 +50,7 @@ restaurant-website/
 ├── images/ # Images for food, drinks, testimonials, etc.
 ├── README.md # Project documentation
 └── LICENSE # MIT License
-
-yaml
+```
 
 ---
 
